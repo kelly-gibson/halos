@@ -12,15 +12,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e71cd161-93b7-483c-becd-6523ba338266" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/serial.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.cargo/config.toml" beforeDir="false" afterPath="$PROJECT_DIR$/.cargo/config.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interrupts.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vga_buffer.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/vga_buffer.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="15" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="RsBuildProfile:dev" />
   <component name="FileTemplateManagerImpl">
@@ -29,6 +38,7 @@
         <option value="Rust File" />
       </list>
     </option>
+    <option name="SCHEME" value="Project" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,6 +58,72 @@
   <component name="MacroExpansionManager">
     <option name="directoryName" value="y3nnITCf" />
   </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.000043518851238" />
+      <entry key="S2" value="1.081303819960536" />
+      <entry key="S5" value="1.3895989921635026" />
+      <entry key="S10" value="1.7581166881218957" />
+      <entry key="S30" value="2.7388059299917336" />
+      <entry key="S60" value="4.980221174842544" />
+      <entry key="M2" value="9.783028691803615" />
+      <entry key="M5" value="29.12242734287181" />
+      <entry key="M10" value="72.15636551462279" />
+      <entry key="M15" value="114.99895786447532" />
+      <entry key="M30" value="217.05098749918523" />
+      <entry key="H1" value="330.75684562321857" />
+      <entry key="H2" value="422.85213688996464" />
+      <entry key="H4" value="482.8005165061143" />
+      <entry key="D1" value="541.9984414455389" />
+      <entry key="W1" value="553.1172057134152" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="2.1466551350258267E-110" />
+      <entry key="MS500" value="1.1650711707337305E-22" />
+      <entry key="S2" value="3.285398949820832E-6" />
+      <entry key="S5" value="0.0064067126481973415" />
+      <entry key="S10" value="0.08004194305610868" />
+      <entry key="S30" value="0.4309660988677955" />
+      <entry key="S60" value="0.6592593028239653" />
+      <entry key="M2" value="0.8848253040358953" />
+      <entry key="M5" value="1.4559784571886152" />
+      <entry key="M10" value="2.00212856223528" />
+      <entry key="M15" value="2.3000783472054507" />
+      <entry key="M30" value="2.786623194225822" />
+      <entry key="H1" value="3.2261674496388157" />
+      <entry key="H2" value="3.553766583060251" />
+      <entry key="H4" value="3.759006751505627" />
+      <entry key="D1" value="3.9570392034048663" />
+      <entry key="W1" value="3.993789791335676" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="3.059163337652405E-12" />
+      <entry key="MS500" value="0.004978839716773739" />
+      <entry key="S2" value="0.2829021685199706" />
+      <entry key="S5" value="0.8121976700331606" />
+      <entry key="S10" value="1.4243309194072933" />
+      <entry key="S30" value="2.9640700337538526" />
+      <entry key="S60" value="5.519323144289942" />
+      <entry key="M2" value="10.599039754877532" />
+      <entry key="M5" value="30.542171055151503" />
+      <entry key="M10" value="74.1360162313453" />
+      <entry key="M15" value="117.28226453484318" />
+      <entry key="M30" value="219.8272831657056" />
+      <entry key="H1" value="333.97662621229557" />
+      <entry key="H2" value="426.40216011305523" />
+      <entry key="H4" value="486.5574623001489" />
+      <entry key="D1" value="545.9551049123386" />
+      <entry key="W1" value="557.1109409474963" />
+    </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4,
   &quot;fromUser&quot;: false
@@ -63,7 +139,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Cargo.Run.executor": "Run",
     "Cargo.check.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.rust.reset.selective.auto.import": "true",
@@ -77,12 +155,19 @@
     "nodejs_package_manager_path": "npm",
     "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
     "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
+    "org.rust.disableDetachedFileInspection/home/kellz/RustroverProjects/halos/serial.rs": "true",
     "org.rust.first.attach.projects": "true",
-    "settings.editor.selected.configurable": "language.rust.build.tool.cargo"
+    "settings.editor.selected.configurable": "language.rust.cargo.check"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
   <component name="RsExternalLinterProjectSettings">
     <option name="channel" value="nightly" />
+    <option name="tool" value="Clippy" />
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
@@ -109,7 +194,7 @@
       </method>
     </configuration>
     <configuration name="check" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
-      <option name="command" value="check --target x86_64-unknown-none" />
+      <option name="command" value="check" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <envs />
       <option name="emulateTerminal" value="true" />
@@ -150,7 +235,13 @@
       <option name="presentableId" value="Default" />
       <updated>1779040543584</updated>
       <workItem from="1779040545043" duration="2492000" />
-      <workItem from="1779043047581" duration="5934000" />
+      <workItem from="1779043047581" duration="6362000" />
+      <workItem from="1779057578106" duration="658000" />
+      <workItem from="1779058298586" duration="2441000" />
+      <workItem from="1779115414748" duration="1916000" />
+      <workItem from="1779117341051" duration="47000" />
+      <workItem from="1779117408045" duration="4918000" />
+      <workItem from="1779159115473" duration="5621000" />
     </task>
     <servers />
   </component>
