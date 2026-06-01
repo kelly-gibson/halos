@@ -1,0 +1,60 @@
+name: Epic / Development
+description: A problem-sized unit of work tracked across all engineering phases.
+title: "[Epic] "
+labels: ["type:epic", "phase:scoping"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        An **Epic** is one *development*: a problem to be solved, tracked across the RFD-5 phases.
+        It opens in Scoping and closes when the work reaches Production. Link child issues below.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement (Scoping)
+      description: What problem is being solved, and why now? State it before proposing a solution.
+    validations:
+      required: true
+  - type: input
+    id: spec-ref
+    attributes:
+      label: Spec reference
+      placeholder: HALOS-MEMORY-SPEC v0.2.0 §7; SENTINEL-SPEC v0.4.0 §5.3
+    validations:
+      required: false
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Architectural layer(s)
+      multiple: true
+      options:
+        - abi-types
+        - frame-alloc
+        - vmem
+        - region
+        - arena
+        - constructor
+        - capability
+        - lifecycle
+    validations:
+      required: false
+  - type: textarea
+    id: phases
+    attributes:
+      label: Phase progression
+      description: Track the development through the phases; each box is usually one or more child issues.
+      value: |
+        - [ ] Scoping — problem framed (this issue)
+        - [ ] Exploration / Prototyping — #
+        - [ ] Determination — ADR #
+        - [ ] Development — #
+        - [ ] Validation — #
+        - [ ] Stress — #
+        - [ ] Production — #
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope / forward targets
+      description: What this development explicitly does not cover. Cite §12 where relevant.
+    validations:
+      required: false

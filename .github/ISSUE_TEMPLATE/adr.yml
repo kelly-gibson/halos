@@ -1,0 +1,50 @@
+name: ADR — Architecture Decision Record
+description: Record a technical determination, its alternatives, and its rationale.
+title: "[ADR] "
+labels: ["phase:determination", "decision-needed"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        An **ADR** captures the Determination phase — the point where a direction is chosen. This issue
+        is the durable record a reviewer reads to understand *why* the system is the way it is. Remove
+        `decision-needed` and add a resolution comment once decided.
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: The forces at play. Link the Spike(s) that informed this.
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: Options considered
+      description: Each option with its trade-off. Be honest about the cost of the one you reject.
+      value: |
+        1. **Option A** — trade-off:
+        2. **Option B** — trade-off:
+    validations:
+      required: true
+  - type: textarea
+    id: decision
+    attributes:
+      label: Decision
+      description: The option chosen, stated plainly. Fill in when determined.
+    validations:
+      required: false
+  - type: textarea
+    id: consequences
+    attributes:
+      label: Consequences
+      description: What this commits the system to, and what it forecloses. Note any forward target deferred (§12).
+    validations:
+      required: false
+  - type: input
+    id: spec-update
+    attributes:
+      label: Spec section to amend
+      description: Which section this decision updates (e.g. a reconciliation-log entry).
+      placeholder: HALOS-MEMORY-SPEC §6 / §13
+    validations:
+      required: false
