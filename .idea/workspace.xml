@@ -11,16 +11,10 @@
     </cargoProject>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e71cd161-93b7-483c-becd-6523ba338266" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/serial.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cargo/config.toml" beforeDir="false" afterPath="$PROJECT_DIR$/.cargo/config.toml" afterDir="false" />
+    <list default="true" id="57b37cf0-bcbf-4c32-9e3e-1000089dd926" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/halos.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interrupts.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vga_buffer.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/vga_buffer.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,35 +22,27 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="15" />
+    <option name="cachedIndexableFilesCount" value="2" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="RsBuildProfile:dev" />
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Rust File" />
-      </list>
-    </option>
-    <option name="SCHEME" value="Project" />
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;kelly-gibson&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "kelly-gibson"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/kelly-gibson/halos.git&quot;,
-    &quot;accountId&quot;: &quot;8fde702f-99ca-4b96-817c-9dd82d48d3bc&quot;
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/kelly-gibson/halos.git",
+    "accountId": "8fde702f-99ca-4b96-817c-9dd82d48d3bc"
   }
-}</component>
+}]]></component>
   <component name="MacroExpansionManager">
-    <option name="directoryName" value="y3nnITCf" />
+    <option name="directoryName" value="08q4cIMv" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
@@ -64,162 +50,106 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.000043518851238" />
-      <entry key="S2" value="1.081303819960536" />
-      <entry key="S5" value="1.3895989921635026" />
-      <entry key="S10" value="1.7581166881218957" />
-      <entry key="S30" value="2.7388059299917336" />
-      <entry key="S60" value="4.980221174842544" />
-      <entry key="M2" value="9.783028691803615" />
-      <entry key="M5" value="29.12242734287181" />
-      <entry key="M10" value="72.15636551462279" />
-      <entry key="M15" value="114.99895786447532" />
-      <entry key="M30" value="217.05098749918523" />
-      <entry key="H1" value="330.75684562321857" />
-      <entry key="H2" value="422.85213688996464" />
-      <entry key="H4" value="482.8005165061143" />
-      <entry key="D1" value="541.9984414455389" />
-      <entry key="W1" value="553.1172057134152" />
+      <entry key="MS100" value="1.2814733991880967" />
+      <entry key="MS500" value="2.2669749408735393" />
+      <entry key="S2" value="2.945064781964498" />
+      <entry key="S5" value="6.383758164578785" />
+      <entry key="S10" value="14.609977703545582" />
+      <entry key="S30" value="33.12715581687973" />
+      <entry key="S60" value="44.33196981061845" />
+      <entry key="M2" value="54.46799580516364" />
+      <entry key="M5" value="64.05676300615985" />
+      <entry key="M10" value="68.20924010545086" />
+      <entry key="M15" value="69.72948172794914" />
+      <entry key="M30" value="71.32484689676991" />
+      <entry key="H1" value="72.1521468577544" />
+      <entry key="H2" value="72.57346534549731" />
+      <entry key="H4" value="72.78607571785217" />
+      <entry key="D1" value="72.96425428729763" />
+      <entry key="W1" value="72.99489121921675" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="2.1466551350258267E-110" />
-      <entry key="MS500" value="1.1650711707337305E-22" />
-      <entry key="S2" value="3.285398949820832E-6" />
-      <entry key="S5" value="0.0064067126481973415" />
-      <entry key="S10" value="0.08004194305610868" />
-      <entry key="S30" value="0.4309660988677955" />
-      <entry key="S60" value="0.6592593028239653" />
-      <entry key="M2" value="0.8848253040358953" />
-      <entry key="M5" value="1.4559784571886152" />
-      <entry key="M10" value="2.00212856223528" />
-      <entry key="M15" value="2.3000783472054507" />
-      <entry key="M30" value="2.786623194225822" />
-      <entry key="H1" value="3.2261674496388157" />
-      <entry key="H2" value="3.553766583060251" />
-      <entry key="H4" value="3.759006751505627" />
-      <entry key="D1" value="3.9570392034048663" />
-      <entry key="W1" value="3.993789791335676" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="3.059163337652405E-12" />
-      <entry key="MS500" value="0.004978839716773739" />
-      <entry key="S2" value="0.2829021685199706" />
-      <entry key="S5" value="0.8121976700331606" />
-      <entry key="S10" value="1.4243309194072933" />
-      <entry key="S30" value="2.9640700337538526" />
-      <entry key="S60" value="5.519323144289942" />
-      <entry key="M2" value="10.599039754877532" />
-      <entry key="M5" value="30.542171055151503" />
-      <entry key="M10" value="74.1360162313453" />
-      <entry key="M15" value="117.28226453484318" />
-      <entry key="M30" value="219.8272831657056" />
-      <entry key="H1" value="333.97662621229557" />
-      <entry key="H2" value="426.40216011305523" />
-      <entry key="H4" value="486.5574623001489" />
-      <entry key="D1" value="545.9551049123386" />
-      <entry key="W1" value="557.1109409474963" />
+      <entry key="MS100" value="1.2551010579825364" />
+      <entry key="MS500" value="2.2575664303414182" />
+      <entry key="S2" value="2.9416874287540486" />
+      <entry key="S5" value="6.378839865188984" />
+      <entry key="S10" value="14.603749476586597" />
+      <entry key="S30" value="33.122693794381924" />
+      <entry key="S60" value="44.32911116689361" />
+      <entry key="M2" value="54.466302585787844" />
+      <entry key="M5" value="64.05598940682806" />
+      <entry key="M10" value="68.20883275516773" />
+      <entry key="M15" value="69.72920516715934" />
+      <entry key="M30" value="71.32470600146843" />
+      <entry key="H1" value="72.1520757331239" />
+      <entry key="H2" value="72.57342961092628" />
+      <entry key="H4" value="72.78605780711972" />
+      <entry key="D1" value="72.96425129610843" />
+      <entry key="W1" value="72.99489079175501" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 4,
-  &quot;fromUser&quot;: false
-}</component>
-  <component name="ProjectId" id="3DrWCokzk3Zjtj5udYFDjGHjalu" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3EYWinX7M4jcVfUAQKvyfVstG5G" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Cargo.Run.executor": "Run",
-    "Cargo.check.executor": "Run",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.rust.reset.selective.auto.import": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "feature-exception-handling",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
+    "last_opened_file_path": "/home/kellz/RustroverProjects/halos",
     "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
     "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
-    "org.rust.disableDetachedFileInspection/home/kellz/RustroverProjects/halos/serial.rs": "true",
-    "org.rust.first.attach.projects": "true",
-    "settings.editor.selected.configurable": "language.rust.cargo.check"
+    "settings.editor.selected.configurable": "inlay.hints"
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RsExternalLinterProjectSettings">
+    <option name="additionalArguments" value="-Zjson-target-spec" />
     <option name="channel" value="nightly" />
     <option name="tool" value="Clippy" />
-  </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="cargo check" />
-      <command value="cargo check --target x86_64-unknown-none" />
-    </option>
-  </component>
-  <component name="RunManager" selected="Cargo.Run">
-    <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command" nameIsGenerated="true">
-      <option name="command" value="run" />
-      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <envs />
-      <option name="emulateTerminal" value="true" />
-      <option name="channel" value="DEFAULT" />
-      <option name="requiredFeatures" value="true" />
-      <option name="allFeatures" value="false" />
-      <option name="withSudo" value="false" />
-      <option name="buildTarget" value="REMOTE" />
-      <option name="backtrace" value="SHORT" />
-      <option name="isRedirectInput" value="false" />
-      <option name="redirectInputPath" value="" />
-      <method v="2">
-        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="check" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
-      <option name="command" value="check" />
-      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <envs />
-      <option name="emulateTerminal" value="true" />
-      <option name="channel" value="DEFAULT" />
-      <option name="requiredFeatures" value="true" />
-      <option name="allFeatures" value="false" />
-      <option name="withSudo" value="false" />
-      <option name="buildTarget" value="REMOTE" />
-      <option name="backtrace" value="SHORT" />
-      <option name="isRedirectInput" value="false" />
-      <option name="redirectInputPath" value="" />
-      <method v="2">
-        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Cargo.Run" />
-      <item itemvalue="Cargo.check" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Cargo.check" />
-        <item itemvalue="Cargo.check" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
@@ -229,65 +159,13 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e71cd161-93b7-483c-becd-6523ba338266" name="Changes" comment="" />
-      <created>1779040543584</created>
+      <changelist id="57b37cf0-bcbf-4c32-9e3e-1000089dd926" name="Changes" comment="" />
+      <created>1780356113673</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1779040543584</updated>
-      <workItem from="1779040545043" duration="2492000" />
-      <workItem from="1779043047581" duration="6362000" />
-      <workItem from="1779057578106" duration="658000" />
-      <workItem from="1779058298586" duration="2441000" />
-      <workItem from="1779115414748" duration="1916000" />
-      <workItem from="1779117341051" duration="47000" />
-      <workItem from="1779117408045" duration="4918000" />
-      <workItem from="1779159115473" duration="5621000" />
+      <updated>1780356113673</updated>
+      <workItem from="1780356114870" duration="4033000" />
     </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="origin/feature-exception-handling" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="feature-exception-handling" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>
