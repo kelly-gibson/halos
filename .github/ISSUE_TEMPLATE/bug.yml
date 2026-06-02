@@ -1,0 +1,52 @@
+name: Bug
+description: A defect in built work — a deviation from the spec or expected behaviour.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A **Bug** can surface in any phase. Tie it to the spec property it violates where possible — that
+        turns a bug report into a verification gap.
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+      description: What the spec says should happen. Cite the section.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: Minimal steps or a test that triggers it.
+    validations:
+      required: true
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Architectural layer
+      options:
+        - abi-types
+        - frame-alloc
+        - vmem
+        - region
+        - arena
+        - constructor
+        - capability
+        - lifecycle
+    validations:
+      required: false
+  - type: input
+    id: spec-ref
+    attributes:
+      label: Violated guarantee / invariant
+      placeholder: HALOS-MEMORY-SPEC §9.4 (atomic construction)
+    validations:
+      required: false

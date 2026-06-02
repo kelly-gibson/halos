@@ -1,0 +1,75 @@
+name: Feature
+description: A concrete implementation task traceable to a spec section.
+title: "[Feature] "
+labels: ["phase:development"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A **Feature** is Development-phase work: building a determined design. Do not open it until its
+        governing Determination (ADR) is closed; link the ADR under "Blocked by" so the dependency gates it.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What gets built, and which spec section it realises.
+    validations:
+      required: true
+  - type: input
+    id: spec-ref
+    attributes:
+      label: Spec reference
+      placeholder: HALOS-MEMORY-SPEC v0.2.0 §4.2
+    validations:
+      required: true
+  - type: input
+    id: blocked-by
+    attributes:
+      label: Blocked by
+      description: ADR and prerequisite issues that must close first.
+      placeholder: "#12 (ADR), #15"
+    validations:
+      required: false
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Architectural layer
+      options:
+        - abi-types
+        - frame-alloc
+        - vmem
+        - region
+        - arena
+        - constructor
+        - capability
+        - lifecycle
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      value: |
+        **In:**
+
+        **Out (deferred — see §12):**
+    validations:
+      required: false
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Phrase these as the guarantees (§9) and invariants (§10) the work must uphold.
+      value: |
+        - [ ] Satisfies guarantee §9.N —
+        - [ ] Upholds invariant §10 —
+        - [ ] `#![no_std]`, no external crates (hand-rolled per design principle)
+    validations:
+      required: true
+  - type: checkboxes
+    id: abi-impact
+    attributes:
+      label: ABI impact
+      options:
+        - label: This changes a shared ABI type or manifest shape (also add the `breaking-abi` label)
+          required: false

@@ -1,3 +1,16 @@
+use core::fmt;
+use lazy_static::lazy_static;
+use spin::Mutex;
+use volatile::Volatile;
+
+lazy_static! {
+    pub static ref WRITER: Mutex<Writer> = Mutex::new(Writer {
+        column_position: 0,
+        color_code: ColorCode::new(Color::LightGray, Color::Black),
+        buffer: unsafe { &mut *(0xb8000 as *mut Buffer) },
+    });
+}
+
 #[allow(dead_code)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
@@ -27,7 +40,7 @@ pub enum Color {
 struct ColorCode(u8);
 
 impl ColorCode {
-    fn new(foreground: Color, background: Color) -> ColorCode {
+    const fn new(foreground: Color, background: Color) -> ColorCode {
         ColorCode((background as u8) << 4 | (foreground as u8))
     }
 }
@@ -44,7 +57,6 @@ struct ScreenChar {
 const BUFFER_HEIGHT: usize = 25;
 const BUFFER_WIDTH: usize = 80;
 
-use volatile::Volatile;
 #[repr(transparent)]
 // A wrapper around a 2 dimensional array of Volatile<ScreenChar> representing the VGA text buffer
 struct Buffer {
@@ -64,11 +76,11 @@ impl Writer {
         match byte {
             b'/' => self.new_line(),
             byte => {
-                if self.column_position>= BUFFER_WIDTH {
+                if self.column_position >= BUFFER_WIDTH {
                     self.new_line();
                 }
 
-                let row =  BUFFER_HEIGHT - 1;
+                let row = BUFFER_HEIGHT - 1;
                 let col = self.column_position;
 
                 let color_code = self.color_code;
@@ -82,8 +94,8 @@ impl Writer {
     }
     // New line method
     fn new_line(&mut self) {
-        for row in 1..BUFFER_HEIGHT{
-            for col in 0..BUFFER_WIDTH{
+        for row in 1..BUFFER_HEIGHT {
+            for col in 0..BUFFER_WIDTH {
                 let character = self.buffer.chars[row][col].read();
                 self.buffer.chars[row - 1][col].write(character);
             }
@@ -92,7 +104,7 @@ impl Writer {
         self.column_position = 0;
     }
     // This method clears a row by overwriting all of its characters with a space character
-    fn clear_row(&mut self, row: usize) { 
+    fn clear_row(&mut self, row: usize) {
         let blank = ScreenChar {
             ascii_character: b' ',
             color_code: self.color_code,
@@ -114,8 +126,6 @@ impl Writer {
     }
 }
 
-use core::fmt;
-
 impl fmt::Write for Writer {
     fn write_str(&mut self, s: &str) -> fmt::Result {
         self.write_string(s);
@@ -123,53 +133,25 @@ impl fmt::Write for Writer {
     }
 }
 
-// Attempt to make a global Writer that can be used as an interface in other modules
-use lazy_static::lazy_static;
-use spin::Once;
-use x86_64::instructions::interrupts;
-
-lazy_static! {
-    static ref WRITER_INITIALIZED: Once = Once::new();
-    pub static ref WRITER: Writer = Writer {
-        column_position: 0,
-        color_code: ColorCode::new(Color::LightRed, Color::Black),
-        buffer: unsafe { &mut *(0xb8000 as *mut Buffer) },
-    };
+// makes the println! macro available to external crates.
+// NOTE: currently does not support different stdout devices, only the vga buffer.
+#[macro_export]
+macro_rules! print {
+    ($($arg:tt)*) => ($crate::vga_buffer::_print(format_args!($($arg)*)));
 }
 
-// Function to perform a critical section with the WRITER
-// takes a closure f, which operates on a Writer.
-pub fn with_writer<F, R>(f: F) -> R
-
-    where
-        F: FnOnce(&mut Writer) -> R,
-    {
-        // Disable interrupts to create a critical section
-        interrupts::without_interrupts(|| {
-
-        // Ensure that WRITER has been initialized
-        WRITER_INITIALIZED.call_once(|| {});
-
-        // Create a mutable Writer instance within the critical section
-        let mut writer_instance = Writer {
-            column_position: 0,
-            color_code: ColorCode::new(Color::Yellow, Color::Black),
-            buffer: unsafe { &mut *(0xb8000 as *mut Buffer) },
-        };
-
-        // Obtain a mutable reference to the Writer instance
-        let writer_ref = &mut writer_instance;
-
-        // Invoke the closure with the mutable reference
-        f(writer_ref)
-    })
+#[macro_export]
+macro_rules! println {
+    () => ($crate::print!("\n"));
+    ($($arg:tt)*) => ($crate::print!("{}\n", format_args!($($arg)*)));
 }
 
-// Perfroms write operations on the global WRITER
-pub fn example_global_writer() {
+#[doc(hidden)]
+pub fn _print(args: fmt::Arguments) {
     use core::fmt::Write;
-    with_writer(|writer| {
-        // Perform write operations using the writer
-        write!(writer, "The numbers are {} and {}", 54, 1.0 / 3.0).unwrap();
+    use x86_64::instructions::interrupts;
+
+    interrupts::without_interrupts(|| {
+        WRITER.lock().write_fmt(args).unwrap();
     });
 }
