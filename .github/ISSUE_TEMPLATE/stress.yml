@@ -1,0 +1,57 @@
+name: Stress
+description: Operate the artifact at load until it breaks, and record where.
+title: "[Stress] "
+labels: ["phase:stress"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A **Stress** issue covers the Stress phase: drive the artifact past comfortable load to find the
+        breaking point before production does. The goal is to discover limits and failure modes, not to pass.
+  - type: textarea
+    id: stressor
+    attributes:
+      label: Stressor
+      description: What is being pushed, and how.
+      placeholder: e.g. frame-allocator CAS path under N-core contention; arena bump cursor to exhaustion
+    validations:
+      required: true
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Architectural layer
+      options:
+        - frame-alloc
+        - vmem
+        - region
+        - arena
+        - constructor
+        - capability
+        - lifecycle
+    validations:
+      required: true
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: Expected failure mode
+      description: Where you predict it breaks, and how it should fail.
+    validations:
+      required: false
+  - type: textarea
+    id: edges
+    attributes:
+      label: Known edges to probe
+      value: |
+        - [ ] Arena no-rewind exhaustion under alloc/free churn (§4.5)
+        - [ ] Guard-page overflow reported as PageFault, not corruption (§8)
+        - [ ] Epoch aliasing at the 2^32 boundary (§6 note)
+        - [ ] OOM returns null / AllocError, never aliasing memory (§9.8)
+    validations:
+      required: false
+  - type: textarea
+    id: findings
+    attributes:
+      label: Findings
+      description: Where it broke, the limit reached, and any follow-on issues opened.
+    validations:
+      required: false

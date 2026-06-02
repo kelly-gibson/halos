@@ -1,0 +1,37 @@
+name: Release / Bring-up
+description: Integrate and ship a milestone (the Production phase).
+title: "[Release] "
+labels: ["phase:production"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A **Release** issue covers the Production phase: integrate the validated, stressed pieces and tag a
+        milestone. For a kernel this is integrated bring-up rather than a deploy.
+  - type: input
+    id: milestone
+    attributes:
+      label: Milestone / version
+      placeholder: M1 — Frame Allocator / v0.2.0-bringup
+    validations:
+      required: true
+  - type: textarea
+    id: included
+    attributes:
+      label: Included work
+      description: The features, verifications, and stress results rolled into this release.
+    validations:
+      required: true
+  - type: textarea
+    id: checklist
+    attributes:
+      label: Production checklist
+      value: |
+        - [ ] All child features closed
+        - [ ] Validation issues green in CI
+        - [ ] Stress findings triaged (fixed or documented as known limits)
+        - [ ] Spec reconciliation log (§13) updated for any decisions made
+        - [ ] Deferred work captured as `forward-target` issues (§12)
+        - [ ] Tag cut
+    validations:
+      required: true

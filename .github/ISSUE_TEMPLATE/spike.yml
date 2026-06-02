@@ -1,0 +1,65 @@
+name: Spike
+description: A time-boxed investigation to de-risk a question. Output is knowledge, not shippable code.
+title: "[Spike] "
+labels: ["phase:exploration"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A **Spike** covers the Exploration and Prototyping phases: investigate options and build
+        *throwaway* artifacts to learn. Relabel `phase:prototyping` once a concrete prototype is the
+        focus. A spike that uncovers a decision hands off to an **ADR** issue rather than deciding inline.
+        **NOTE:** the closing comment or linked ADR should record both the decision and the rationale behind why it was reached.
+  - type: textarea
+    id: question
+    attributes:
+      label: Question to resolve
+      description: The single thing this spike must answer.
+    validations:
+      required: true
+  - type: textarea
+    id: unblocks
+    attributes:
+      label: What this unblocks
+      description: The downstream work gated on the answer.
+    validations:
+      required: true
+  - type: input
+    id: timebox
+    attributes:
+      label: Time-box
+      placeholder: e.g. 2 days
+    validations:
+      required: true
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Architectural layer
+      options:
+        - abi-types
+        - frame-alloc
+        - vmem
+        - region
+        - arena
+        - constructor
+        - capability
+        - lifecycle
+    validations:
+      required: false
+  - type: textarea
+    id: approach
+    attributes:
+      label: Options to investigate
+    validations:
+      required: false
+  - type: textarea
+    id: deliverable
+    attributes:
+      label: Deliverable
+      description: Prototype code is throwaway; the lasting output is findings.
+      value: |
+        - [ ] Findings written up in this issue
+        - [ ] Follow-on ADR opened if a decision is implied: #
+        - [ ] Prototype branch marked throwaway / archived
+    validations:
+      required: false

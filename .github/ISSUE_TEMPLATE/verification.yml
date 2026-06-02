@@ -1,0 +1,76 @@
+name: Verification
+description: Confirm a built artifact is correct — tests, models, or proofs.
+title: "[Verify] "
+labels: ["phase:validation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A **Verification** issue covers the Validation phase: confirming the artifact does what the spec
+        claims. This includes unit/integration tests and the formal verification targets in SENTINEL-SPEC §9.
+  - type: textarea
+    id: claim
+    attributes:
+      label: Property under verification
+      description: The exact guarantee or invariant being confirmed.
+    validations:
+      required: true
+  - type: dropdown
+    id: target
+    attributes:
+      label: Verification target
+      description: Maps to SENTINEL-SPEC §9 where applicable.
+      options:
+        - Constructor atomicity (no reachable partial address space)
+        - Manifest soundness (W^X, non-overlap, in-segment entry point)
+        - Capability flow (no scope or epoch widening after mint)
+        - Restart liveness (bounded recovery under bounded fault rate)
+        - Crash containment (failure bounded by Domain)
+        - Process-lifecycle model (valid epoch in every reachable state)
+        - Unit / integration test
+    validations:
+      required: true
+  - type: dropdown
+    id: method
+    attributes:
+      label: Method
+      options:
+        - unit test
+        - integration test
+        - regression test
+        - functionality test
+        - Property-based test
+    validations:
+      required: true
+  - type: input
+    id: spec-ref
+    attributes:
+      label: Spec reference
+      placeholder: SENTINEL-SPEC v0.4.0 §9; HALOS-MEMORY-SPEC §9.4 / §10
+    validations:
+      required: true
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Architectural layer
+      options:
+        - abi-types
+        - frame-alloc
+        - vmem
+        - region
+        - arena
+        - constructor
+        - capability
+        - lifecycle
+    validations:
+      required: false
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Pass criteria
+      value: |
+        - [ ] Property stated precisely
+        - [ ] Check is reproducible (CI step or documented command)
+        - [ ] Counterexample handling documented (what a failure looks like)
+    validations:
+      required: true
